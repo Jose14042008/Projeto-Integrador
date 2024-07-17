@@ -1,5 +1,6 @@
 
 *{
+    
     padding: 0px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -37,6 +38,7 @@ margin-left: 10%;
 
 h1{
 font-size: 40px;
+text-align: center;
 }
 h2{
 
@@ -50,10 +52,10 @@ margin-left:10%;
 
 span2{
 color: #8EC641;
+text-align: center;
 }
 
 .login{
-
     color: white;
     text-transform: uppercase;
 }
@@ -62,7 +64,8 @@ color: #8EC641;
 .login input[type="password"] {
     background-color: #8EC641;
     padding: 10px;
-    margin: 10px;
+    margin: 2px;
+    margin-left: -20px;
     width: 220px;
     height: 45px;
     border:none;
@@ -74,15 +77,16 @@ color: #8EC641;
 input[type ="submit"]{
     background-color: #8EC641;
     padding: 10px;
-    margin: 10px;
-    width: 300px;
+    margin: 2px;
+    margin-left: 130px;
+    width: 290px;
     height: 55px;
     border:none;
     border-radius: 30px;
     color: #1E532E;
     text-transform: uppercase;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.285);
-    margin-left: 10.9%;
+  
     cursor: pointer;
 }
 
