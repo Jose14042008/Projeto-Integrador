@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="stylemedia.css">
+	<script src="script.js" defer></script>
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2319/2319280.png" type="image/x-icon" height="20px" />
 	<title>Feira Fácil</title>
 </head>
@@ -24,16 +25,17 @@
 		<p>É uma aplicação web que visa facilitar algumas <br>funções da feira, com foco aos vendedores da feira.</p>
 		<h3>Para acessar entre em sua conta, digite seu email e senha</h3>
 		<div class="login">
-			<form>
+			<form onsubmit="redirectToPage(event)">
 				<p>
 					<label for="iemail"></label>
 					<input type="email" name="email" id="iemail" placeholder="Email" maxlength="50" required> 
 				</p>
 				
 				<p>
-					<label for="isenha" ></label><input type="password" name="senha" id="isenha" placeholder="Senha" maxlength="30" required>
+					<label for="isenha" ></label>
+					<input type="password" name="senha" id="isenha" placeholder="Senha" maxlength="30" required>
 				</p>
-					<input type="submit" value="Logar-se" href="index1.html">  
+					<input type="submit" value="Logar-se">  
 			</form>
 		</div>
 			<p> Não tem uma conta?<a href="indexcadastro.html"> Cadastre-se </a></p>
