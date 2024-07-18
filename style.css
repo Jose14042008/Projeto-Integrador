@@ -10,14 +10,13 @@ body, html{
 }
 
 header{
-    display: flex;
-    border-radius: 10px;
+    display: flexbox;
+    border-radius: 20px;
     color: white;
     background-color: #1E532E;
-    padding: 15px;
+    padding: 5px;
     border: 5px solid green;
 }
-
 img{
     float: right;
     border-radius: 50%; 
@@ -37,8 +36,8 @@ margin-left: 10%;
 }
 
 h1{
-font-size: 40px;
 text-align: center;
+font-size: 50px;
 }
 h2{
 
@@ -52,7 +51,8 @@ margin-left:10%;
 
 span2{
 color: #8EC641;
-text-align: center;
+font-size: 50px;
+
 }
 
 .login{
@@ -86,12 +86,10 @@ input[type ="submit"]{
     color: #1E532E;
     text-transform: uppercase;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.285);
-  
     cursor: pointer;
 }
 
 .login input[type="submit"]:hover {
     background-color: #03A62C;
     transition: 0.4s;
-
-}
+     }
