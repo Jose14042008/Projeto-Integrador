@@ -1,12 +1,14 @@
 <h1 style align="center">Feira fácil </h1>
 
-### Equipe ~ @seraph83 | @igor1712 | @marcosspol09 | @miguelveiga06 | @MiguelS12345</a>
+# Equipe ~ @seraph83 | @igor1712 | @marcosspol09 | @miguelveiga06 | @MiguelS12345
 
-##### Feito com Html5, Css3 e JavaScript
+#### Feito com Html5, Css3 e JavaScript
+
+Funciona bem em mobile e pc
 
 Aplicação web para os vendedores/produtores da feira
 
-Acesso a aplicação via url:
+### Acesso a aplicação via url:
 ```bash
 https://jose14042008.github.io/Projeto-Integrador/
 ```
