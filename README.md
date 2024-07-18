@@ -1,6 +1,6 @@
 <h1 style align="center">Feira fácil </h1>
 
-# Equipe ~ @seraph83 | @igor1712 | @marcosspol09 | @miguelveiga06 | @MiguelS12345
+### Equipe ~ @seraph83 | @igor1712 | @marcosspol09 | @miguelveiga06 | @MiguelS12345
 
 #### Feito com Html5, Css3 e JavaScript
 
