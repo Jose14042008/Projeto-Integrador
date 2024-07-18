@@ -1,10 +1,10 @@
-function redirectToPage(event) {
+    function redirecionarpágina(event) {
     event.preventDefault();
     window.location.href = "indexregistro.html";
 }
 
 
-function validateForm(event) {
+function confirmarsenha(event) {
     event.preventDefault();
 
     const password = document.getElementById('isenha').value;
