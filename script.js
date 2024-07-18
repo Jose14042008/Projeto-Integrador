@@ -1,4 +1,4 @@
-  function redirectToPage(event) {
+function redirectToPage(event) {
     event.preventDefault();
     window.location.href = "indexregistro.html";
 }
