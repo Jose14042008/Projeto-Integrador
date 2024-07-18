@@ -18,3 +18,20 @@ function confirmarsenha(event) {
     window.location.href = "index.html"; 
     return true;
 }
+
+document.getElementById('Tipoproduto').addEventListener('change', function() {
+    const cardContainer = document.getElementById('cardcardgrande');
+    cardContainer.innerHTML = '';
+
+    const selectedValue = this.value;
+    if (selectedValue) {
+        const card = document.createElement('div');
+        card.className = 'card';
+
+        const cardconteudo = document.createElement('option');
+        cardconteudo.textContent = `nossa mas vai dar trabalho em`;
+
+        card.appendChild(cardconteudo);
+        cardContainer.appendChild(card);
+    }
+});
