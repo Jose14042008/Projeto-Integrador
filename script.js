@@ -35,3 +35,5 @@ document.getElementById('Tipoproduto').addEventListener('change', function() {
         cardContainer.appendChild(card);
     }
 });
+
+document.getElementById("Imagem").innerHTML = "<img src='img/ico1.png'>";
