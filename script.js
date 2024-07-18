@@ -36,4 +36,4 @@ document.getElementById('Tipoproduto').addEventListener('change', function() {
     }
 });
 
-document.getElementById("Imagem").innerHTML = "<img src='img/ico1.png'>";
+document.getElementById("Imagem").innerHTML = "<img src='imagem/ico1.png'>";
