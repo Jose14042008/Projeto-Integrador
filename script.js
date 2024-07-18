@@ -29,7 +29,7 @@ document.getElementById('Tipoproduto').addEventListener('change', function() {
         card.className = 'card';
 
         const cardconteudo = document.createElement('option');
-        cardconteudo.textContent = `nossa mas vai dar trabalho em`;
+        cardconteudo.textContent = `${selectedValue}`;
 
         card.appendChild(cardconteudo);
         cardContainer.appendChild(card);
