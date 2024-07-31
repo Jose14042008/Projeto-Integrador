@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylemedia4.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário</title>
+</head>
+<body>
+    <header>
+        <div id="title">
+            <h1>Calen<span2>dário</span2></h1>
+        </div>
+    </header>
+    <div class="calendar-controls">
+        <button onclick="prevMonth()">Anterior</button>
+        <span id="monthYear"></span>
+        <button onclick="nextMonth()">Próximo</button>
+    </div>
+    <div class="calendar" id="calendar">
+        <!-- Calendar days will be generated here by JavaScript -->
+    </div>
+    <div class="sales-info" id="salesInfo">
+        <h2>Relatório de Vendas por dia</h2>
+        <p id="salesText">Clique em uma data para ver as vendas.</p>
+    </div>
+    <script>
+        // Sample sales data
+        const salesData = {
+            '2024-07-01': { 'uvas': 100, 'tomates': 200 },
+            '2024-07-02': { 'cenouras': 150, 'tomates': 250 },
+            '2024-07-03': { 'cenouras': 200, 'tomates': 300 },
+            // Add more dates and sales data as needed
+        };
+
+        // Days of the week for the calendar header
+        const daysOfWeek = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
+        const months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+
+        let currentMonth = new Date().getMonth();
+        let currentYear = new Date().getFullYear();
+
+        function prevMonth() {
+            if (currentMonth === 0) {
+                currentMonth = 11;
+                currentYear--;
+            } else {
+                currentMonth--;
+            }
+            generateCalendar();
+        }
+
+        function nextMonth() {
+            if (currentMonth === 11) {
+                currentMonth = 0;
+                currentYear++;
+            } else {
+                currentMonth++;
+            }
+            generateCalendar();
+        }
+
+        function generateCalendar() {
+            const calendar = document.getElementById('calendar');
+            const monthYear = document.getElementById('monthYear');
+            calendar.innerHTML = '';
+            monthYear.textContent = `${months[currentMonth]} ${currentYear}`;
+
+            // Add calendar header
+            for (let i = 0; i < 7; i++) {
+                const dayName = document.createElement('div');
+                dayName.textContent = daysOfWeek[i];
+                calendar.appendChild(dayName);
+            }
+
+            const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+            const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+            for (let i = 0; i < firstDay; i++) {
+                const emptySlot = document.createElement('div');
+                calendar.appendChild(emptySlot);
+            }
+
+            for (let day = 1; day <= daysInMonth; day++) {
+                const daySlot = document.createElement('div');
+                daySlot.className = 'day';
+                daySlot.textContent = day;
+                daySlot.onclick = () => showSales(currentYear, currentMonth + 1, day);
+                calendar.appendChild(daySlot);
+            }
+        }
+
+        function showSales(year, month, day) {
+            const salesInfo = document.getElementById('salesInfo');
+            const salesText = document.getElementById('salesText');
+            const dateKey = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+            const sales = salesData[dateKey];
+
+            if (sales) {
+                let salesDetails = `Vendas para ${dateKey}:<br>`;
+                for (const [product, amount] of Object.entries(sales)) {
+                    salesDetails += `${product}: R$${amount}<br>`;
+                }
+                salesText.innerHTML = salesDetails;
+            } else {
+                salesText.textContent = `Não houve vendas em ${dateKey}.`;
+            }
+
+            salesInfo.style.display = 'block';
+        }
+
+        window.onload = generateCalendar;
+    </script>
+</body>
+</html>
