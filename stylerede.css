@@ -101,22 +101,23 @@ span2{
   margin-left: 10px;
   margin-right: 10px;
 }
-.botoes{
-  display: block;
+#link{
+  color: #1E532E;
   margin-top: 30px;
-  text-align: center;
-}
-.bvoltar{
-  background-color: #1E532E;
-  width: 100px;
-  height: 40px;
-  border-radius: 20px;
-  border:solid 2px #8EC641;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.34);
-  margin: 20px;
+  border:none;
+  width: 160px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.34);
 }
 
-.voltar{
+#link option{
+  border: none;
+  border-radius: 5px;
+}
+#link:hover{
+  background-color:#1E532E;
+  color: white;
+}
   color: white;
   text-decoration: none;
 }
