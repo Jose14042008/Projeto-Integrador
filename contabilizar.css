@@ -53,10 +53,9 @@ h3 {
 }
 
 .flutuante {
-    width: 200px;
     padding: 10px;
     border: 1px solid black;
-    border-width: 2px;
+    border-width: 5px;
     border-radius: 10px;
     position: absolute;
     width: 400px;
@@ -82,10 +81,11 @@ img {
 
 .botaosoma {
     margin-left: 20px;
+    margin-top: -78px;
 }
 
 h4 {
-    font-size: 45px;
+    font-size: 55px;
     text-align: center;
     background-color: #338f4f;
     color: white;
@@ -102,7 +102,7 @@ p {
 
 #quantidade {
     border-radius: 4%;
-    margin-left: center
+    margin-top:-20px;
     
 }
 
@@ -114,9 +114,11 @@ p {
 
 .menos_ {
     padding: 2px;
-    width: 30%;
+    width: 98%;
     float: right;
     margin: 2%;
+    font-size: 20;
+
 }
 
 img {
