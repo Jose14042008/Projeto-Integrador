@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Redes Sociais dos Usuários</title>
+</head>
+<body>
+<header>
+	<div id="title">
+		<h1> Redes <span2>Sociais</span2> </h1>
+	</div>
+</header>
+
+<div class="container">
+  
+  <div class="input_grupo" id="instagram-input">
+    <input type="url" id="instagram-link" placeholder="Digite o link do Instagram">
+    <a href="https://www.instagram.com/" target="_blank"><button onclick="adicionarLink('instagram')">Adicionar</button></a>
+  </div>
+
+  
+  <div class="input_grupo" id="facebook-input">
+    <input type="url" id="facebook-link" placeholder="Digite o link do Facebook">
+    <a href="https://pt-br.facebook.com/login/device-based/regular/login/" target="_blank"><button onclick="adicionarLink('facebook')">Adicionar</button></a>
+  </div>
+
+  <div class="input_grupo" id="tiktok-input">
+    <input type="url" id="tiktok-link" placeholder="Digite o link do TikTok">
+    <a href="https://www.tiktok.com/upload?lang=pt-BR" target="_blank"><button onclick="adicionarLink('tiktok')">Adicionar</button></a>
+  </div>
+
+  <ul class="links-list" id="links-list">
+    
+  </ul>
+</div>
+
+<div class="botoes">
+  <button class="bvoltar"><a class="voltar" href="https://jose14042008.github.io/Projeto-Integrador/">Inicio</a> </button>
+  <button class="bvoltar"><a class="voltar" href="https://jose14042008.github.io/Projeto-Integrador/">Vender</a> </button>
+  <button class="bvoltar"><a class="voltar" href="https://jose14042008.github.io/Projeto-Integrador/">Relatorio</a> </button>
+</div>
+<script>
+  function adicionarLink(redeSocial) {
+    var input = document.getElementById(redeSocial + '-link');
+    var link = input.value.trim();
+
+    if (link !== '') {
+      var linksList = document.getElementById('links-list');
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = link;
+      a.textContent = link;
+      a.target = '_blank'; 
+      
+      
+      var img = document.createElement('img');
+      img.src = getIconPath(redeSocial); 
+      img.alt = redeSocial.charAt(0).toUpperCase() + redeSocial.slice(1);
+      
+      
+      a.appendChild(img);
+      li.appendChild(a);
+      linksList.appendChild(li);
+
+      
+      input.value = '';
+      document.getElementById(redeSocial + '-input').style.display = 'none';
+    } else {
+      alert('Por favor, insira um link válido.');
+    }
+  }
+
+  
+  function getIconPath(redeSocial) {
+    switch (redeSocial) {
+      case 'instagram':
+        return ' instagram.png';
+      case 'facebook':
+        return 'facebook.png';
+      case 'tiktok':
+        return 'tiktok.png';
+      default:
+        return 'generic-social.png'; 
+    }
+  }
+</script>
+</body> <!--voltar a pagina principal (home)-->
+</html>
