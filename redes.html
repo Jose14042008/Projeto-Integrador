@@ -36,11 +36,27 @@
   </ul>
 </div>
 
-<div class="botoes">
-  <button class="bvoltar"><a class="voltar" href="https://jose14042008.github.io/Projeto-Integrador/">Inicio</a> </button>
-  <button class="bvoltar"><a class="voltar" href="https://jose14042008.github.io/Projeto-Integrador/">Vender</a> </button>
-  <button class="bvoltar"><a class="voltar" href="https://jose14042008.github.io/Projeto-Integrador/">Relatorio</a> </button>
-</div>
+<select id="link">
+  <option value="" selected>Escolha qual página ir</option>
+  <option value="indexregistro.html">Registro</option>
+  <option value="contabilizar.html">Contabilidade</option>
+  <option value="calendario.html">Calendário</option>
+</select>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+   $('#link').on('change', function () {
+        var url = $(this).val(); 
+        if (url) { 
+            window.open(url);
+         }
+         return false;
+       });
+    });
+</script>
 <script>
   function adicionarLink(redeSocial) {
     var input = document.getElementById(redeSocial + '-link');
