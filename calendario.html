@@ -24,6 +24,27 @@
         <h2>Relatório de Vendas por dia</h2>
         <p id="salesText">Clique em uma data para ver as vendas.</p>
     </div>
+     <select id="link">
+        <option value="" selected>Escolha qual página ir</option>
+        <option value="redes.html">Redes</option>
+        <option value="contabilizar.html">Contabilidade</option>
+        <option value="calendario.html">Calendário</option>
+     </select>
+     
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+     
+     <script>
+      $(document).ready(function(){
+     
+         $('#link').on('change', function () {
+              var url = $(this).val(); 
+              if (url) { 
+                  window.open(url);
+               }
+               return false;
+             });
+          });
+     </script>
     <script>
         // Sample sales data
         const salesData = {
