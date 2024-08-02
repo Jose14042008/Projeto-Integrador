@@ -46,15 +46,17 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 <script>
-$(document).ready(function(){
-
-   $('#link').on('change', function () {
-        var url = $(this).val(); 
-        if (url) { 
-            window.location.href = url;
-         }
-       });
-    });
+script>
+      $(document).ready(function(){
+     
+         $('#link').on('change', function () {
+              var url = $(this).val(); 
+              if (url) { 
+                  window.location.href = url;
+               }
+               return false;
+             });
+          });
 </script>
 <script>
   function adicionarLink(redeSocial) {
