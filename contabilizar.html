@@ -7,7 +7,7 @@
   <link rel="stylesheet" type="text/css" href="contabilizar.css">
   <link rel="stylesheet" type="text/css" href="contabilizarmedia.css">
   <script src="script.js" defer></script>
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2319/2319280.png" type="image/x-icon" height="20px" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2319/2319280.png" type="image/x-icon" height="20px" />-+
   <title>Contabilizar</title>
 </head>
 <header>
@@ -28,7 +28,7 @@
 
     
 <div class="titulo2">
-  <p class="botao"><a href="calendario.html"> Finalizar </a>
+ <center> <p class="botao"><a href="calendario.html"> Finalizar </a></center>
 
     </div>
     <div class="container">
@@ -95,25 +95,7 @@
         
        
         <br>
-       <select id="link">
-            <option value="" selected>Escolha qual página ir</option>
-            <option value="/Projeto-Integrador/redes.html">Redes</option>
-            <option value="/Projeto-Integrador/indexregistro.html">Registro</option>
-            <option value="/Projeto-Integrador/calendario.html">Calendário</option>
-        </select>
-          <script>
-        $(document).ready(function(){
-       
-           $('#link').on('change', function () {
-                var url = $(this).val(); 
-                if (url) { 
-                    window.location.href = url;
-                 }
-                 return false;
-               });
-            });
-       </script>
-          
+        
         <script>
         function converterParaKg(valNum, outputId) {
           valNum = parseFloat(valNum);
