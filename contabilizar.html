@@ -95,7 +95,25 @@
         
        
         <br>
-        
+       <select id="link">
+            <option value="" selected>Escolha qual página ir</option>
+            <option value="/Projeto-Integrador/redes.html">Redes</option>
+            <option value="/Projeto-Integrador/indexregistro.html">Registro</option>
+            <option value="/Projeto-Integrador/calendario.html">Calendário</option>
+        </select>
+          <script>
+        $(document).ready(function(){
+       
+           $('#link').on('change', function () {
+                var url = $(this).val(); 
+                if (url) { 
+                    window.location.href = url;
+                 }
+                 return false;
+               });
+            });
+       </script>
+          
         <script>
         function converterParaKg(valNum, outputId) {
           valNum = parseFloat(valNum);
