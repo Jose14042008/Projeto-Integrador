@@ -52,10 +52,11 @@ h3 {
     text-align: center;
 }
 
+
 .flutuante {
     padding: 10px;
     border: 1px solid black;
-    border-width: 5px;
+    border-width: 2px;
     border-radius: 10px;
     position: absolute;
     width: 400px;
@@ -63,10 +64,10 @@ h3 {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(255, 255, 255);
+    height: 33%;
 }
 
 img {
-    margin-left: -130px;
     border-radius: 20px;
     margin: none;
     margin-top: -70px;
@@ -81,11 +82,10 @@ img {
 
 .botaosoma {
     margin-left: 20px;
-    margin-top: -78px;
 }
 
 h4 {
-    font-size: 55px;
+    font-size: 45px;
     text-align: center;
     background-color: #338f4f;
     color: white;
@@ -94,7 +94,7 @@ h4 {
     margin-top: -0px;
 }
 
-p {
+.paragrafo {
     margin-top: 50px;
     font-weight: 500;
     max-width: 30%;
@@ -102,8 +102,8 @@ p {
 
 #quantidade {
     border-radius: 4%;
-    margin-top:-20px;
-    
+
+
 }
 
 .tutorial {
@@ -117,8 +117,7 @@ p {
     width: 98%;
     float: right;
     margin: 2%;
-    font-size: 20;
-
+    font-size: 150%;
 }
 
 img {
@@ -134,4 +133,60 @@ img {
 
 .input_center {
     text-align: center;
+}
+
+
+.container2 {
+    margin-top: 300px;
+
+}
+
+.flutuante2 {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid black;
+    border-width: 2px;
+    border-radius: 10px;
+    position: absolute;
+    width: 400px;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    height: 90%;
+    margin-top: 25px;
+}
+
+.container3 {
+    margin-top: 300px;
+
+}
+
+.flutuante3 {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid black;
+    border-width: 2px;
+    border-radius: 10px;
+    position: absolute;
+    width: 400px;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    height: 90%;
+    margin-top: 25px;
+}
+
+.input2{
+margin-left: 120px;
+}
+
+.gramas{
+margin-left: -80px;
+}
+
+a{
+text-decoration: none;
+color:black;
 }
