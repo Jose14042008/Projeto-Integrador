@@ -97,10 +97,9 @@ select {
     margin-top: 0;
 }
 #link {
-    text-align: left;
-    margin-right: 20%;
-    margin: 30%;
-    padding: 2px;
+    margin-right: -50%;
+    margin-top: 500px;
+    padding: 3px;
     border-radius: 8px;
     background-color: #69db7c;
 }
@@ -116,3 +115,13 @@ select {
     max-width: 350px;
     margin-bottom: 10px;
 }
+
+@media (max-width: 768px) {
+        #link {
+            margin-right: 100%;
+            margin-top: 500px;
+            padding: 2px;
+            border-radius: 8px;
+            background-color: #69db7c;
+        }
+    }
