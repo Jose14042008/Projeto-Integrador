@@ -21,19 +21,23 @@
             <option value="salgados">Fritos, assados e empanados</option>
             <option value="artesanatos">Panos, acessórios e decoração</option>
         </select>
+
+        <button onclick="thisIsjoseph()" class="tubarao">Toque aqui Champz</button>
     
         <div id="cardcardgrande"></div>
     </div>
 
 	<span id="Imagem"></span>
-
-    <select id="link">
-        <option value="" selected>Escolha qual página ir</option>
-        <option value="redes.html">Redes</option>
-        <option value="contabilizar.html">Contabilidade</option>
-        <option value="calendario.html">Calendário</option>
-     </select>
-     
+    
+    <div class="#link">
+        <select id="link">
+            <option value="" selected>Escolha qual página ir</option>
+            <option value="http://www.youtube.com">Redes</option>
+            <option value="http://pt.stackoverflow.com/">Contabilidade</option>
+            <option value="http://pt.stackoverflow.com/">Calendário</option>
+            <option value="teste.html">Registro</option>
+        </select>
+    </div>
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
      
      <script>
@@ -42,7 +46,7 @@
          $('#link').on('change', function () {
               var url = $(this).val(); 
               if (url) { 
-                  window.location.href = url;
+                  window.open(url);
                }
                return false;
              });
