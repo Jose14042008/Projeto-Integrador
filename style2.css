@@ -96,3 +96,23 @@ select {
 .card h2 {
     margin-top: 0;
 }
+#link {
+    text-align: left;
+    margin-right: 20%;
+    margin: 30%;
+    padding: 2px;
+    border-radius: 8px;
+    background-color: #69db7c;
+}
+
+.tubarao {
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    border-radius: 120px;
+    border: 1px solid #0775f2;
+    background-color: #69db7c;
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 10px;
+}
