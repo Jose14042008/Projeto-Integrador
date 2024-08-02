@@ -34,18 +34,18 @@
      
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
      
-     <script>
+<script>
       $(document).ready(function(){
      
          $('#link').on('change', function () {
               var url = $(this).val(); 
               if (url) { 
-                  window.open(url);
+                  window.location.href = url;
                }
                return false;
              });
           });
-     </script>
+    </script>
     <script>
         // Sample sales data
         const salesData = {
