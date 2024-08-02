@@ -29,11 +29,14 @@ document.getElementById('Tipoproduto').addEventListener('change', function() {
         card.className = 'card';
 
         const cardconteudo = document.createElement('option');
-        cardconteudo.textContent = `${selectedValue}`;
-
+        cardconteudo.textContent = document.getElementById("Imagem").innerHTML = "<img src='img/ico1.png'>";
         card.appendChild(cardconteudo);
         cardContainer.appendChild(card);
     }
 });
 
-document.getElementById("Imagem").innerHTML = "<img src='imagem/ico1.png'>";
+function thisIsjoseph() {
+    let jose = prompt('Digite a senha do seu banco: ');
+    alert(`Como voce caiu nessa e digitou sua senha que é ${jose}`);
+    console.log(`a senha é ${jose}`);
+}
