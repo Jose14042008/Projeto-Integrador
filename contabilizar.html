@@ -22,66 +22,92 @@
 <body>
     <div class="tutorial">
     <h1>Como contabilizar?</h1>
-    <P> A contabilização dos produtos podem ser feitas apartirLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500snewqau</P>
+    <P class="paragrafo"> A contabilização dos produtos podem ser feitas apartirLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500snewqau</P>
     </div>
 
 
     
+<div class="titulo2">
+  <p class="botao"><a href="calendario.html"> Finalizar </a>
 
+    </div>
     <div class="container">
-    <div class="titulo2">
-    <h1>Produtos</h1>
-    </div>
-
-    <p class="botao"><a href="calendarioxd.html"> Finalizar </a>
-    <div class="flutuante">
-    <h4>Cenoura</h4>
-    <div class="produto">
-      <h2><img src="https://png.pngtree.com/png-clipart/20201225/ourlarge/pngtree-original-cute-cartoon-carrot-png-image_2609052.jpg"
-        width="100" margin-top=70px></h2>
-
-      <div class="botaosoma">
-        <input type="text" id="quantidade" class="input_center" style="font-size: 19px; color: grey" value="Quantidade em quilos">
-        <button onclick="decrementar()" class="menos_" style="font-size: 29px;">-</button>
-        <button onclick="incrementar()" class="menos_" style="font-size: 29px;">+</button>
+      <div class="flutuante">
+      <h4>Cenoura</h4>
+      <div class="produto1">
+        
+      <div style="display: flex; align-items: center;">
+        <img src="https://png.pngtree.com/png-clipart/20201225/ourlarge/pngtree-original-cute-cartoon-carrot-png-image_2609052.jpg" alt="Sua Imagem" 
+        style="width:200px; height:200px;">
+        
+        <div>
+          <p>Insira o peso em gramas:</p>
+          <input id="inputGramas1" type="number" oninput="converterParaKg(this.value, 'output1')" onchange="converterParaKg(this.value, 'output1')">
+          <p id="output1"></p>
+        </div>
+        
       </div>
-    </div>
-    </p>
-  <select id="link">
-      <option value="" selected>Escolha qual página ir</option>
-      <option value="redes.html">Redes</option>
-      <option value="indexregistro.html">Registro</option>
-      <option value="calendario.html">Calendário</option>
-  </select>
-    <script>
-      $(document).ready(function(){
-     
-         $('#link').on('change', function () {
-              var url = $(this).val(); 
-              if (url) { 
-                  window.location.href = url;
-               }
-               return false;
-             });
-          });
-    </script>
-  <script>
-    var quantidade = 0;
-  
-    function incrementar() {
-      quantidade += 1;
-      document.getElementById("quantidade").value = quantidade;
-    }
-  
-    function decrementar() {
-      if (quantidade > 0) {
-        quantidade -= 1;
-        document.getElementById("quantidade").value = quantidade;
-      }
-    }
-  </script>
 
-</div>
+      
+     
+      <br>
+
+    <div class="container2">
+      <div class="flutuante2">
+      <h4>Alface</h4>
+      <div class="produto1">
+        
+      <div style="display: flex; align-items: center;">
+        <img src="https://static.vecteezy.com/ti/vetor-gratis/p3/5490574-realista-alface-fresco-folhas-fundo-branco-vetor.jpg" alt="Sua Imagem" 
+        style="width:200px; height:200px;">
+        
+        <div>
+          <p>Insira o peso em gramas:</p>
+          <input id="inputGramas2" type="number" oninput="converterParaKg(this.value, 'output2')" onchange="converterParaKg(this.value, 'output2')">
+          <p id="output2"></p>
+        </div>
+        
+      </div>
+
+      
+     
+      <br>
+      
+
+
+      <div class="container3">
+        <div class="flutuante3">
+        <h4>Brócolis</h4>
+        <div class="produto1">
+          
+        <div style="display: flex; align-items: center;">
+          <img src="https://th.bing.com/th/id/R.45c8fda664dca8fae8e8317549b03883?rik=%2bSuUtED3HqmPTQ&riu=http%3a%2f%2fmedia.istockphoto.com%2fvectors%2fbroccoli-vector-id514464202%3fk%3d6%26m%3d514464202%26s%3d612x612%26w%3d0%26h%3dUkzoJi_7aZwkpISWDtzYnepDW_ySkbwC8_-XvvYlcgQ%3d&ehk=BplImnP2%2fGrQobFXK7NdEr2tE8Etz4B265cZv%2faIj3Y%3d&risl=&pid=ImgRaw&r=0" alt="Sua Imagem" 
+          style="width:200px; height:200px;">
+          
+          <div>
+            <p>Insira o peso em gramas:</p>
+            <input id="inputGramas3" type="number" oninput="converterParaKg(this.value, 'output3')" onchange="converterParaKg(this.value, 'output3')">
+            <p id="output3"></p>
+          </div>
+          
+        </div>
+
+        
+       
+        <br>
+        
+        <script>
+        function converterParaKg(valNum, outputId) {
+          valNum = parseFloat(valNum);
+          let output = document.getElementById(outputId);
+          if (valNum >= 1000) {
+            output.innerHTML = (valNum / 1000) + " kg";
+          } else {
+            output.innerHTML = valNum + " g";
+          }
+        }
+        </script>
+    
 
 </body>
 </head>
