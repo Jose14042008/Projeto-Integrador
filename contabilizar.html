@@ -46,7 +46,18 @@
         <button onclick="incrementar()" class="menos_" style="font-size: 29px;">+</button>
       </div>
     </div>
-    
+    <script>
+      $(document).ready(function(){
+     
+         $('#link').on('change', function () {
+              var url = $(this).val(); 
+              if (url) { 
+                  window.location.href = url;
+               }
+               return false;
+             });
+          });
+    </script>
   <script>
     var quantidade = 0;
   
