@@ -122,13 +122,6 @@ span2{
   text-decoration: none;
 }
 
-#link2 {
-    margin-right: -50%;
-    margin-top: 500px;
-    padding: 3px;
-    border-radius: 8px;
-    background-color: #69db7c;
-}
 select[name]{ 
     background-color: #69db7c;
     font-family: Arial;
@@ -153,4 +146,10 @@ select {
     max-width: 350px;
     margin-bottom: 10px;
 }
-
+#link2 {
+    margin-right: -50%;
+    margin-top: 500px;
+    padding: 3px;
+    border-radius: 8px;
+    background-color: #69db7c;
+}
