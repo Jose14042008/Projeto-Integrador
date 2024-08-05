@@ -41,7 +41,7 @@ span2 {
     height: 45px;
     border-radius: 30px;
     font-size: 25px;
-    margin-top: 53%;
+    margin-top: 113%;
 
     text-align: center;
 
@@ -54,17 +54,19 @@ h3 {
 
 
 .flutuante {
+   
     padding: 10px;
     border: 1px solid black;
     border-width: 2px;
     border-radius: 10px;
     position: absolute;
     width: 400px;
-    top: 50%;
-    left: 50%;
+    top: 40%;
+    left: 70%;
     transform: translate(-50%, -50%);
     background-color: rgb(255, 255, 255);
     height: 33%;
+    background-color: #137932;
 }
 
 img {
@@ -95,6 +97,10 @@ h4 {
 }
 
 .paragrafo {
+    background-color: #1E532E;
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
     margin-top: 50px;
     font-weight: 500;
     max-width: 30%;
@@ -107,6 +113,7 @@ h4 {
 }
 
 .tutorial {
+   
     margin-top: -22%;
     margin-left: 30px;
     font-size: 30px;
@@ -153,8 +160,9 @@ img {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(255, 255, 255);
-    height: 90%;
+    height: 94%;
     margin-top: 25px;
+    background-color: #137932;
 }
 
 .container3 {
@@ -174,8 +182,9 @@ img {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(255, 255, 255);
-    height: 90%;
+    height: 94%;
     margin-top: 25px;
+    background-color: #137932;
 }
 
 .input2{
@@ -189,4 +198,42 @@ margin-left: -80px;
 a{
 text-decoration: none;
 color:black;
+}
+
+
+.paragrafo{
+margin-left: 100px;
+}
+
+.titulogamer{
+margin-left: 100px;
+background-color: #137932;
+max-width: 600px;
+padding: 30px;
+border-radius: 10px;
+color: white;
+}
+
+#title{
+   margin-left: 30px; 
+}
+
+span3{
+ color: #aaeb51;
+}
+
+.gramas{
+margin-left: 1px;
+font-size: 25px;
+color: white;
+
+}
+.G{
+margin-inline-end:2222px ;
+margin-top: -80px;
+}
+
+.oi{
+    color:#b2f2bb;
+    font-size: 80px;
 }
