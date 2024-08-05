@@ -36,16 +36,17 @@
     
   </ul>
 </div>
-<select id="link">
-  <option value="" selected>Escolha qual página ir</option>
-  <option value="indexregistro.html">Registro</option>
-  <option value="contabilizar.html">Contabilidade</option>
-  <option value="calendario.html">Calendário</option>
-</select>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-<script>
+  <div class="#link2">
+        <select id="link">
+            <option value="" selected>Escolha qual página ir</option>
+            <option value="/Projeto-Integrador/redes.html">Redes</option>
+            <option value="/Projeto-Integrador/contabilizar.html">Contabilidade</option>
+            <option value="/Projeto-Integrador/calendario.html">Calendário</option>
+        </select>
+    </div>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+     
+     <script>
         $(document).ready(function(){
        
            $('#link').on('change', function () {
@@ -57,6 +58,8 @@
                });
             });
        </script>
+    <script src="script.js"></script>
+</script>
 <script>
   function adicionarLink(redeSocial) {
     var input = document.getElementById(redeSocial + '-link');
