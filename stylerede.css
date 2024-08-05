@@ -114,14 +114,6 @@ span2{
   border: none;
   border-radius: 5px;
 }
-#link:hover{
-  background-color:#1E532E;
-  color: white;
-}
-  color: white;
-  text-decoration: none;
-}
-
 select[name]{ 
     background-color: #69db7c;
     font-family: Arial;
