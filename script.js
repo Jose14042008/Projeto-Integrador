@@ -2,8 +2,6 @@
     event.preventDefault();
     window.location.href = "indexregistro.html";
 }
-
-
 function confirmarsenha(event) {
     event.preventDefault();
 
@@ -28,15 +26,26 @@ document.getElementById('Tipoproduto').addEventListener('change', function() {
         const card = document.createElement('div');
         card.className = 'card';
 
-        const cardconteudo = document.createElement('option');
-        cardconteudo.textContent = document.getElementById("Imagem").innerHTML = "<img src='img/ico1.png'>";
+        const cardconteudo = document.createElement('div');
+        cardconteudo.textContent = "Selecione entre os tipos de produtos: " + selectedValue;
+
         card.appendChild(cardconteudo);
         cardContainer.appendChild(card);
+
+        if (selectedValue === 'hortifrutes') {
+            const imgElement = document.createElement("img");
+            imgElement.src = 'https://cdn-icons-png.flaticon.com/512/883/883760.png';
+            imgElement.id = 'Imagem';
+            cardconteudo.appendChild(imgElement);
+
+            
+            card.addEventListener("mouseover", () => {
+                imgElement.style.display = 'block';
+            });
+
+            card.addEventListener("mouseout", () => {
+                imgElement.style.display = 'none';
+            });
+        }
     }
 });
-
-function thisIsjoseph() {
-    let jose = prompt('Digite a senha do seu banco: ');
-    alert(`Como voce caiu nessa e digitou sua senha que é ${jose}`);
-    console.log(`a senha é ${jose}`);
-}
