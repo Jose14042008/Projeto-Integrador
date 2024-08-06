@@ -31,7 +31,7 @@ document.getElementById('Tipoproduto').addEventListener('change', function() {
             imgElement.src = 'https://i.imgur.com/dCtbu55.png';
             descricao.textContent = "1 kg arroz";
             preco.textContent = "R$ 8,69";
-        } else if (selectedValue === 'salgados') {
+        } else if (selectedValue === 'salgados e doces') {
             imgElement.src = 'https://cdn-icons-png.flaticon.com/512/1921/1921315.png';
             descricao.textContent = "1 unidade pastel";
             preco.textContent = "R$ 5,00";
