@@ -41,7 +41,7 @@ span2 {
     height: 45px;
     border-radius: 30px;
     font-size: 25px;
-    margin-top: 113%;
+    margin-top: 87%;
 
     text-align: center;
 
@@ -272,3 +272,28 @@ margin-top: -80px;
 .enchelinguica{
     font-size: 30px;
 }
+
+.imgagem{
+transform: scale(1.0);
+}
+
+.feiralink{
+color: white;
+}
+.A{
+    margin-top: 73%;
+margin-left: -290%;
+}
+
+footer{
+background-color: #137932;
+width: 479.2%;
+height: 50px;
+
+}
+
+.powerwade{
+margin-left: 5%;
+font-weight: 400;    
+}
+
