@@ -1,22 +1,3 @@
-    function redirecionarpágina(event) {
-    event.preventDefault();
-    window.location.href = "indexregistro.html";
-}
-function confirmarsenha(event) {
-    event.preventDefault();
-
-    const password = document.getElementById('isenha').value;
-    const confirmPassword = document.getElementById('isenha_confirm').value;
-
-    if (password !== confirmPassword) {
-        alert('As senhas não coincidem.');
-        return false;
-    }
-
-    window.location.href = "index.html"; 
-    return true;
-}
-
 document.getElementById('Tipoproduto').addEventListener('change', function() {
     const cardContainer = document.getElementById('cardcardgrande');
     cardContainer.innerHTML = '';
@@ -26,26 +7,54 @@ document.getElementById('Tipoproduto').addEventListener('change', function() {
         const card = document.createElement('div');
         card.className = 'card';
 
-        const cardconteudo = document.createElement('div');
-        cardconteudo.textContent = "Selecione entre os tipos de produtos: " + selectedValue;
+        const cardConteudo = document.createElement('div');
+        cardConteudo.className = 'card-conteudo';
 
-        card.appendChild(cardconteudo);
-        cardContainer.appendChild(card);
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.className = 'produto-checkbox';
+
+        const imgElement = document.createElement("img");
+        imgElement.className = 'produto-imagem';
+
+        const descricao = document.createElement('p');
+        descricao.className = 'descricao';
+
+        const preco = document.createElement('p');
+        preco.className = 'preco';
 
         if (selectedValue === 'hortifrutes') {
-            const imgElement = document.createElement("img");
             imgElement.src = 'https://cdn-icons-png.flaticon.com/512/883/883760.png';
-            imgElement.id = 'Imagem';
-            cardconteudo.appendChild(imgElement);
-
-            
-            card.addEventListener("mouseover", () => {
-                imgElement.style.display = 'block';
-            });
-
-            card.addEventListener("mouseout", () => {
-                imgElement.style.display = 'none';
-            });
+            descricao.textContent = "1 kg cenoura";
+            preco.textContent = "R$ 5,10";
+        } else if (selectedValue === 'naturais') {
+            imgElement.src = 'https://i.imgur.com/dCtbu55.png';
+            descricao.textContent = "1 kg arroz";
+            preco.textContent = "R$ 8,69";
+        } else if (selectedValue === 'salgados') {
+            imgElement.src = 'https://cdn-icons-png.flaticon.com/512/1921/1921315.png';
+            descricao.textContent = "1 unidade pastel";
+            preco.textContent = "R$ 5,00";
+        } else if (selectedValue === 'artesanatos') {
+            imgElement.src = 'https://static.vecteezy.com/ti/vetor-gratis/p2/5362042-dobrado-toalha-ou-pano-pilha-de-tecido-desenho-linha-isolado-cartoon-preto-e-branco-ilustracao-embalado-roupas-limpas-vetor.jpg';
+            descricao.textContent = "1 peça pano de prato";
+            preco.textContent = "R$ 2,70";
         }
+
+        const cardLeft = document.createElement('div');
+        cardLeft.className = 'card-left';
+        cardLeft.appendChild(checkbox);
+        cardLeft.appendChild(imgElement);
+
+        const cardRight = document.createElement('div');
+        cardRight.className = 'card-right';
+        cardRight.appendChild(descricao);
+        cardRight.appendChild(preco);
+
+        cardConteudo.appendChild(cardLeft);
+        cardConteudo.appendChild(cardRight);
+
+        card.appendChild(cardConteudo);
+        cardContainer.appendChild(card);
     }
 });
