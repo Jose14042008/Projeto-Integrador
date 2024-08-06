@@ -1,63 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="stylecalendario.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2319/2319280.png" type="image/x-icon" height="20px" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendário</title>
 </head>
-<header>
-  <div id="title">
-    <h1 class="titulooo"><a class="feiralink" href="https://jose14042008.github.io/Projeto-Integrador/"> Feira <span2>
-          Fácil </span2> </a></h1>
 <body>
     <header>
         <div id="title">
             <h1>Calen<span2>dário</span2></h1>
-
-  <div class="tutorial">
-    <h1 class="titulogamer">Como <span3>contabilizar?</span3>
-    </h1>
-    <P class="paragrafo"> A contabilização dos produtos podem ser feitas apartirLorem Ipsum is simply dummy text of the
-      printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
-      1500snewqau</P>
-  </div>
-  <div class="enchelinguica">
-    <h1 class="titu">Para onde vão os dados colocados?</h1>
-    <p class="para">Os dados inseridos nessa pagina irão ser registrados na proxima página de calendario aonde
-      todos os seus produtos vendidos cadastrados irão aparecer em seus respectivos dias e meses
-    </p>
-
-  </div>
-
-
-
-  <div class="titulo2">
-    <center>
-      <p class="botao"><a href="calendario.html"> Finalizar </a>
-    </center>
-
-  </div>
-
-  <div class="container">
-    <div class="flutuante">
-      <h4>Cenoura</h4>
-      <div class="produto1">
-
-        <div style="display: flex; align-items: center;">
-          <img
-            src="https://png.pngtree.com/png-clipart/20201225/ourlarge/pngtree-original-cute-cartoon-carrot-png-image_2609052.jpg"
-            alt="Sua Imagem" style="width:200px; height:200px;">
-
-          <div class="G">
-            <p class="gramas">Insira o peso em gramas:</p>
-            <input id="inputGramas1" type="number" oninput="converterParaKg(this.value, 'output1')"
-              onchange="converterParaKg(this.value, 'output1')">
-            <p id="output1"></p>
-          </div>
-
         </div>
     </header>
     <div class="calendar-controls">
@@ -72,30 +25,26 @@
         <h2>Relatório de Vendas por dia</h2>
         <p id="salesText">Clique em uma data para ver as vendas.</p>
     </div>
-      <div class="#link2">
+    <div class="link">
         <select id="link">
             <option value="" selected>Escolha qual página ir</option>
             <option value="/Projeto-Integrador/redes.html">Redes</option>
             <option value="/Projeto-Integrador/contabilizar.html">Contabilidade</option>
-            <option value="/Projeto-Integrador/indexregistro.html">Registro</option>
+            <option value="/Projeto-Integrador/calendario.html">Calendário</option>
         </select>
     </div>
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-     <script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
         $(document).ready(function(){
-
-           $('#link').on('change', function () {
+            $('#link').on('change', function () {
                 var url = $(this).val(); 
                 if (url) { 
                     window.location.href = url;
-                 }
-                 return false;
-               });
+                }
+                return false;
             });
-       </script>
-    <script src="script.js"></script>
-</script>
+        });
+    </script>
     <script>
         // Sample sales data
         const salesData = {
@@ -183,3 +132,5 @@
 
         window.onload = generateCalendar;
     </script>
+</body>
+</html>
