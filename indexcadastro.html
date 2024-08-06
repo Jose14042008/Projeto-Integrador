@@ -5,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="stylemedia.css">
-	<script src="script.js" defer></script>
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2319/2319280.png" type="image/x-icon" height="20px" />
 	<title>Feira Fácil</title>
 </head>
@@ -44,7 +43,22 @@
 			<p> Já tem uma conta?<a href="index.html"> Login </a></p>
 	</aside>
 </main>
+<script>
+function confirmarsenha(event) {
+    event.preventDefault();
 
+    const password = document.getElementById('isenha').value;
+    const confirmPassword = document.getElementById('isenha_confirm').value;
+
+    if (password !== confirmPassword) {
+        alert('As senhas não coincidem.');
+        return false;
+    }
+
+    window.location.href = "index.html"; 
+    return true;
+}
+</script>
 
 </body>
 </html>
