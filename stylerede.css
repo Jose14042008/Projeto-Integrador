@@ -11,25 +11,31 @@ body {
   padding: 20px;
 }
 
-header{
-  display: flexbox;
-  border-radius: 20px;
-  color: white;
+header {
+  display: flex;
+  align-items: center;
   background-color: #1E532E;
-  padding: 5px;
+  padding: 10px;
+  border-radius: 20px;
   border: 5px solid green;
   margin-bottom: 20px;
 }
 
-h1{
-  text-align: center;
-  font-size: 50px;
-  }
+header >  a img{
+  display: block;
+  text-align: left;
+  margin-left: 8px;
+  border-radius: 50px;
+}
+header .titulo{
+  margin: auto;
+  color: white;
+  font-size: 2em;
+}
 
-span2{
-  color: #8EC641;
-  font-size: 50px;
-  
+header .titulo span2{
+  text-align: center;
+  color: #69db7c;
 }
 
 .container {
