@@ -3,107 +3,162 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2319/2319280.png" type="image/x-icon" height="20px" />
 <link rel="stylesheet" href="stylerede.css">
-	<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2319/2319280.png" type="image/x-icon" height="20px" />
 <title>Redes Sociais dos Usuários</title>
 </head>
 <body>
 <header>
-	<div id="title">
-		<h1> Redes <span2>Sociais</span2> </h1>
-	</div>
+  <div id="title">
+    <h1> Redes <span2>Sociais</span2> </h1>
+  </div>
 </header>
 
 <div class="container">
-  
+
   <div class="input_grupo" id="instagram-input">
     <input type="url" id="instagram-link" placeholder="Digite o link do Instagram">
-    <a href="https://www.instagram.com/" target="_blank"><button onclick="adicionarLink('instagram')">Adicionar</button></a>
+    <button onclick="adicionarLink('instagram')">Adicionar</button>
   </div>
 
-  
   <div class="input_grupo" id="facebook-input">
     <input type="url" id="facebook-link" placeholder="Digite o link do Facebook">
-    <a href="https://pt-br.facebook.com/login/device-based/regular/login/" target="_blank"><button onclick="adicionarLink('facebook')">Adicionar</button></a>
+    <button onclick="adicionarLink('facebook')">Adicionar</button>
   </div>
 
   <div class="input_grupo" id="tiktok-input">
     <input type="url" id="tiktok-link" placeholder="Digite o link do TikTok">
-    <a href="https://www.tiktok.com/upload?lang=pt-BR" target="_blank"><button onclick="adicionarLink('tiktok')">Adicionar</button></a>
+    <button onclick="adicionarLink('tiktok')">Adicionar</button>
   </div>
 
   <ul class="links-list" id="links-list">
-    
   </ul>
+  <button onclick="limparLinksSalvos()">Limpar Links Salvos</button>
 </div>
-  <div class="#link2">
-        <select id="link">
-            <option value="" selected>Escolha qual página ir</option>
-            <option value="/Projeto-Integrador/indexregistro.html">Registro</option>
-            <option value="/Projeto-Integrador/contabilizar.html">Contabilidade</option>
-            <option value="/Projeto-Integrador/calendario.html">Calendário</option>
-        </select>
-    </div>
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-     
-     <script>
-        $(document).ready(function(){
-       
-           $('#link').on('change', function () {
-                var url = $(this).val(); 
-                if (url) { 
-                    window.location.href = url;
-                 }
-                 return false;
-               });
-            });
-       </script>
-    <script src="script.js"></script>
-</script>
-<script>
+<script> 
+  function carregarLinksSalvos() {
+    var linksSalvos = JSON.parse(localStorage.getItem('links'));
+    var linksList = document.getElementById('links-list');
+
+    if (linksSalvos) {
+      linksSalvos.forEach(function(link) {
+        adicionarLinkNaLista(link);
+      });
+    }
+  }
+
   function adicionarLink(redeSocial) {
     var input = document.getElementById(redeSocial + '-link');
     var link = input.value.trim();
 
     if (link !== '') {
-      var linksList = document.getElementById('links-list');
-      var li = document.createElement('li');
-      var a = document.createElement('a');
-      a.href = link;
-      a.textContent = link;
-      a.target = '_blank'; 
-      
-      
-      var img = document.createElement('img');
-      img.src = getIconPath(redeSocial); 
-      img.alt = redeSocial.charAt(0).toUpperCase() + redeSocial.slice(1);
-      
-      
-      a.appendChild(img);
-      li.appendChild(a);
-      linksList.appendChild(li);
+      var linksSalvos = JSON.parse(localStorage.getItem('links')) || [];
+      var newLink = {
+        url: link,
+        redeSocial: redeSocial,
+        icon: getIconPath(redeSocial)
+      };
 
-      
+      linksSalvos.push(newLink);
+      localStorage.setItem('links', JSON.stringify(linksSalvos));
+
+      adicionarLinkNaLista(newLink);
+
       input.value = '';
-      document.getElementById(redeSocial + '-input').style.display = 'none';
     } else {
       alert('Por favor, insira um link válido.');
     }
   }
 
-  
+  function adicionarLinkNaLista(linkObj) {
+    var linksList = document.getElementById('links-list');
+    var li = document.createElement('li');
+    var a = document.createElement('a');
+    var img = document.createElement('img');
+    var btnRemover = document.createElement('button');
+
+    a.href = linkObj.url;
+    a.textContent = linkObj.url;
+    a.target = '_blank';
+
+    img.src = linkObj.icon;
+    img.alt = linkObj.redeSocial.charAt(0).toUpperCase() + linkObj.redeSocial.slice(1);
+
+    btnRemover.textContent = 'Remover';
+    btnRemover.onclick = function() {
+      removerLink(linkObj);
+    };
+
+    a.appendChild(img);
+    li.appendChild(a);
+    li.appendChild(btnRemover);
+    linksList.appendChild(li);
+  }
+
+
+  function removerLink(linkObj) {
+    var linksSalvos = JSON.parse(localStorage.getItem('links')) || [];
+    var filteredLinks = linksSalvos.filter(function(link) {
+      return !(link.url === linkObj.url && link.redeSocial === linkObj.redeSocial);
+    });
+
+    localStorage.setItem('links', JSON.stringify(filteredLinks));
+
+    var linksList = document.getElementById('links-list');
+    linksList.innerHTML = ''; 
+    filteredLinks.forEach(function(link) {
+      adicionarLinkNaLista(link);
+    });
+  }
+
+  function limparLinksSalvos() {
+    localStorage.removeItem('links');
+    var linksList = document.getElementById('links-list');
+    linksList.innerHTML = ''; 
+  }
+
+
   function getIconPath(redeSocial) {
     switch (redeSocial) {
       case 'instagram':
-        return '/Projeto-Integrador/img/instagram.png';
+        return '/Projeto-Integrador/img/instagram.png'; 
       case 'facebook':
         return '/Projeto-Integrador/img/facebook.png';
       case 'tiktok':
-        return '/Projeto-Integrador/img/tiktok.png';
+        return '/Projeto-Integrador/img/tiktok.png'; 
       default:
         return '/generic-social.png'; 
     }
   }
+  document.addEventListener('DOMContentLoaded', function() {
+    carregarLinksSalvos();
+  });
 </script>
-</body> <!--voltar a pagina principal (home)-->
+
+
+<div class="#link2">
+  <select id="link">
+      <option value="" selected>Escolha qual página ir</option>
+      <option value="/Projeto-Integrador/indexregistro.html">Registro</option>
+      <option value="/Projeto-Integrador/contabilizar.html">Contabilidade</option>
+      <option value="/Projeto-Integrador/calendario.html">Calendário</option>
+  </select>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+ 
+     $('#link').on('change', function () {
+          var url = $(this).val(); 
+          if (url) { 
+              window.location.href = url;
+           }
+           return false;
+         });
+      });
+ </script>
+<script src="script.js"></script>
+
+</body>
 </html>
