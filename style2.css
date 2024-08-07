@@ -9,6 +9,8 @@ body, html {
 }
 
 header {
+    display: flex;
+    align-items: center;
     border-radius: 20px;
     color: white;
     background-color: #1E532E;
@@ -16,6 +18,10 @@ header {
     border: 5px solid green;
 }
 
+header h2{
+    margin-left: 20px;
+    margin-right: 25%;
+}
 h1 {
     text-align: center;
     font-size: 50px;
@@ -24,13 +30,16 @@ h1 {
 h2 {
     text-align: center;
     font-size: 40px;
+
+}
+ht {
+    text-align: left;
 }
 
 span2 {
     color: #8EC641;
-    font-size: 50px;
+    font-size: 45px;
 }
-
 select[name] { 
     background-color: #69db7c;
     font-family: Arial;
@@ -113,10 +122,26 @@ select {
 
 #link {
     margin-right: -75%;
-    margin-top: 20%;
+    margin-top: 27%;
     padding: 3px;
     border-radius: 8px;
     background-color: #69db7c;
+}
+a button {
+    background-color: #69db7c;
+    border: 1px solid;
+    border-color: #2f9e44;
+    border-radius: 8px;
+    font-size: 25px;
+    display: none;
+    margin-top: 10px;
+}
+.feiralink{
+    color: white;
+    }
+.home {
+    font-size: 20px;
+    text-align: left;
 }
 
 @media (max-width: 760px) {
@@ -237,4 +262,12 @@ select {
         background-color: #69db7c;
         font-size: 30px;
     }
+    a button {
+        background-color: #69db7c;
+        border: 1px solid;
+        border-color: #2f9e44;
+        border-radius: 8px;
+        font-size: 25px;
+    }
+    
 }
