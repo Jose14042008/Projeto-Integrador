@@ -135,6 +135,7 @@ select option {
 }
 
 select {
+    margin-top: 20px;
     padding: 2px;
     font-size: 30px;
     border-radius: 50px;
